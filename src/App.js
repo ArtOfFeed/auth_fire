@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Navigation from './components/nav';
 
 class App extends Component {
     render() {
@@ -10,12 +11,7 @@ class App extends Component {
                     <div className="logo_wrapper">
                         <img src={logo} alt="" />
                     </div>
-                    <nav className="navigation">
-                        <ul>
-                            <li><a href="http://" target="_blank" rel="noopener noreferrer">Login</a></li>
-                            <li><a href="http://" target="_blank" rel="noopener noreferrer">Sign in</a></li>
-                        </ul>
-                    </nav>
+                    <Navigation />
                 </header>
             </div>
         );
