@@ -39,3 +39,9 @@ ul {
 .navigation li a {
     line-height: 80px;
 }
+form {
+    display: 'flex';
+    flex-direction: 'column';
+    margin: 'auto';
+    width: 'fit-content';
+}
