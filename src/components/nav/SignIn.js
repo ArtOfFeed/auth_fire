@@ -12,11 +12,13 @@ function Transition(props) {
     return <Slide direction="down" {...props} />;
 }
 
-class SignUp extends Component {
+class SignIn extends Component {
     state = {
         open: false,
-        name_sign: '',
-        password_sign: ''
+        email: '',
+        password: '',
+        first_name: '',
+        last_name: ''
     };
 
     handleClickOpen = (e) => {
@@ -44,12 +46,14 @@ class SignUp extends Component {
     render() {
         return (
             <li>
-                <a href="/Sign" className="link" onClick={this.handleClickOpen} rel="noopener noreferrer">SignUp</a>
+                <a href="/Sign" className="link" onClick={this.handleClickOpen} rel="noopener noreferrer">SignIn</a>
                 <Dialog open={this.state.open} TransitionComponent={Transition} fullWidth={true} maxWidth={'xs'} keepMounted onClose={this.handleClose} aria-labelledby="alert-dialog-slide-title" aria-describedby="alert-dialog-slide-description">
-                    <form id="sign-up-form" onSubmit={this.handleSignSubmit} >
+                    <form id="sign-in-form" onSubmit={this.handleSignSubmit} >
                         <DialogContent>
-                            <TextField margin="dense" id="name_sign" onChange={this.handleChange} label="Email" type="email" fullWidth />
-                            <TextField margin="dense" id="password_sign" onChange={this.handleChange} label="Password" type="password" fullWidth />
+                            <TextField margin="dense" id="email" onChange={this.handleChange} label="Email" type="email" fullWidth />
+                            <TextField margin="dense" id="password" onChange={this.handleChange} label="Password" type="password" fullWidth />
+                            <TextField margin="dense" id="first_name" onChange={this.handleChange} label="First Name" type="text" fullWidth />
+                            <TextField margin="dense" id="last_name" onChange={this.handleChange} label="Last Name" type="text" fullWidth />
                         </DialogContent>
                         <DialogActions>
                             <Button type="submit" color="primary">Sumbit</Button>
@@ -62,4 +66,4 @@ class SignUp extends Component {
     }
 }
 
-export default SignUp;
+export default SignIn;

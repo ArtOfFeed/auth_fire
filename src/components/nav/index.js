@@ -1,13 +1,13 @@
 import React from 'react';
-import Login from './login';
-import Sign from './signup';
+import SignIn from './SignIn';
+import SignUp from './SignUp';
 
 const Navigation = () => {
     return (
         <nav className="navigation">
             <ul>
-                <Login />
-                <Sign />
+                <SignUp />
+                <SignIn />
             </ul>
         </nav>
     );
